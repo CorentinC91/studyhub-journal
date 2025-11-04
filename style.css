@@ -1,6 +1,54 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 30px;
-  background: #f7f7f7;
+  margin: 30px; 
+  background: #ffffff;
 }
 h1 { color: #0b6; }
+
+ul { color: rgb(88, 9, 87); }
+
+/* Layout simple */
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  flex: 1 1 300px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* Avatar (optionnel) */
+.avatar {
+  width: 120px;
+  border-radius: 8px;
+  display:block;
+  margin-top: 10px;
+}
+
+/* Small responsive */
+@media (max-width: 600px) {
+  .container { flex-direction: column; }
+}
+
+/* Thème sombre */
+body.dark {
+  background: #111827;
+  color: #e5e7eb;
+}
+body.dark .card {
+  background: #1f2937;
+  box-shadow: none;
+}
+
